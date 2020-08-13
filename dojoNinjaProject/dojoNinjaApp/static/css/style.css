@@ -1,0 +1,11 @@
+*{
+    background-color: aqua;
+}
+#main{
+    display: flex;
+}
+
+form{
+    margin: 20px;
+}
+

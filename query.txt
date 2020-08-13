@@ -1,0 +1,34 @@
+Dojo.objects.create(name = "Painting", city = "Vinci", state = "Florence")
+Dojo.objects.create(name = "Architecture", city = "Urbino", state = "Pesaro")
+Dojo.objects.create(name = "Sculpting", city = "Seattle", state = "WA")
+
+Dojo.objects.all().delete()
+
+
+
+Dojo.objects.create(name = "Painting", city = "Chicago", state = "IL")
+Dojo.objects.create(name = "Architecture", city = "Bellevue", state = "WA")
+Dojo.objects.create(name = "Sculpting", city = "Seattle", state = "WA")
+
+
+
+ninja1 = Ninja.objects.create(first_name = "Leslie", last_name = "Zhou", dojo = Dojo.objects.get(id=7))
+ninja2 = Ninja.objects.create(first_name = "Tom", last_name = "B", dojo = Dojo.objects.get(id=7))
+ninja3 = Ninja.objects.create(first_name = "Jin", last_name = "C", dojo = Dojo.objects.get(id=7))
+
+ninja4 = Ninja.objects.create(first_name = "Leslie2", last_name = "Jin", dojo = Dojo.objects.get(id=8))
+ninja5 = Ninja.objects.create(first_name = "Tom2", last_name = "D", dojo = Dojo.objects.get(id=8))
+ninja6 = Ninja.objects.create(first_name = "Jin2", last_name = "E", dojo = Dojo.objects.get(id=8))
+
+ninja7 = Ninja.objects.create(first_name = "Leslie3", last_name = "Li", dojo = Dojo.objects.get(id=9))
+ninja8 = Ninja.objects.create(first_name = "Tom3", last_name = "L", dojo = Dojo.objects.get(id=9))
+ninja9 = Ninja.objects.create(first_name = "Jin3", last_name = "Q", dojo = Dojo.objects.get(id=9))
+
+ninjias = Ninja.objects.filter(dojo=Dojo.objects.get(id=7))
+
+ninjias = Ninja.objects.filter(dojo=Dojo.objects.get(id=9))
+
+some_dojo = Ninja.objects.last().dojo
+
+new_dojo = Dojo.objects.create(name = "Sculpting", city = "LA", state = "CA")
+
